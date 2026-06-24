@@ -1,15 +1,23 @@
-# Reducing SOC False Alarms through a Human-AI Collaboration Model
+# Final Project - Security Operation Center (Kelompok 4)
 
-> **Final Project — Security Operations Center (SOC)**
-> Kelompok 4
+> Reducing SOC False Alarms through a Human-AI Collaboration Model
+
+## Team
+| No. | Nama | NRP |
+|----------|-----------|-----------|
+| 1. | Dimas Satya Andhika |	5027241032 |
+| 2. | Raya Ahmad Syarif |	5027241041 |
+| 3. | Abiyyu Raihan Putra W |	5027241042 |
+| 4. | Daniswara Fausta N |	5027241050 |
+| 5. | Nisrina Bilqis | 	5027241054 |
+| 6. | Muhammad Khairul Yahya |	5027241092 |
+| 7. | Naruna Vicranthyo |	5027241105 |
 
 ---
 
 ## Table of Contents
 
-- [Overview](#-overview)
 - [Architecture](#-architecture)
-- [Team](#-team)
 - [Tech Stack](#-tech-stack)
 - [AI Model](#-ai-model--randomforest-classifier)
 - [False Alarm Criteria](#-false-alarm-criteria)
@@ -22,23 +30,9 @@
 
 ---
 
-## Overview
-
-Security Operations Centers (SOC) often suffer from **alert fatigue** caused by the *"Better Safe Than Sorry"* philosophy — a high-sensitivity approach that prioritizes recall but generates overwhelming false positives. This project addresses that problem by building a **Human-AI Collaboration SOC system** that intelligently triages alerts, reducing false alarms without sacrificing detection accuracy.
-
-### Background
-
-The system focuses on **DDoS-like / SSH Brute-Force flood attacks**, where a single attacker IP generates thousands of alerts in a short time. Without AI triage, every individual alert would land on the analyst's dashboard — creating noise that buries real threats.
-
-### Objective
-
-> Develop a Human-AI Collaboration SOC system that reduces false alarms without compromising detection accuracy.
-
----
-
 ## Architecture
 
-The system is deployed on **Azure Student Free-Tier** infrastructure and integrates three core components:
+Sistem dijalankan menggunakan infrastruktur **Azure Student Free-Tier** dan mengintegrasi 3 komponen inti:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -83,7 +77,7 @@ The system is deployed on **Azure Student Free-Tier** infrastructure and integra
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Komponen | Teknologi |
 |----------|-----------|
@@ -215,7 +209,7 @@ Metrik yang digunakan untuk evaluasi:
 
 ---
 
-## 📈 Results & Analysis
+## Results & Analysis
 
 ### Dataset Overview
 
@@ -298,13 +292,6 @@ soc-human-ai-collaboration/
 ├── model/
 │   ├── soc_triage_rf_model.joblib         # Trained RandomForest model
 │   └── soc_triage_features.joblib         # Feature list untuk inferensi
-│
-├── docs/
-│   ├── architecture_diagram.png           # Diagram arsitektur sistem
-│   ├── human_ai_loop.png                  # Diagram Human-AI Collaboration
-│   ├── wazuh_agent_muncul.jpeg            # Screenshot agent Wazuh aktif
-│   ├── dokumentasi_dapatkan_file_csv.jpeg # Screenshot parse_alerts output
-│   └── dokumentasi_ddos.jpeg             # Screenshot DDoS alert logs
 │
 ├── requirements.txt                    # Python dependencies
 └── README.md                          # Dokumentasi ini
